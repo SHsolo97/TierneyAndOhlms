@@ -5,6 +5,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
+import { getAssetPath } from "@/lib/asset-path"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 export function Navbar() {
@@ -18,11 +19,13 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image 
-            src="/logo.png" 
+            src={getAssetPath("logo.png")}
             alt="Tierney and Ohlms" 
-            width={140} 
-            height={140} 
+            width={120} 
+            height={120} 
             className="object-contain"
+            priority
+            unoptimized
           />
         </Link>
 
