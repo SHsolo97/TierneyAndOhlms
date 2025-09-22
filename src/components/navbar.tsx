@@ -2,10 +2,8 @@
 
 import * as React from "react"
 import Link from "next/link"
-import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
-import { getAssetPath } from "@/lib/asset-path"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 export function Navbar() {
@@ -18,14 +16,12 @@ export function Navbar() {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
-          <Image 
-            src={getAssetPath("logo.png")}
+          <img 
+            src="/TierneyAndOhlms/logo.png"
             alt="Tierney and Ohlms" 
             width={120} 
             height={120} 
             className="object-contain"
-            priority
-            unoptimized
           />
         </Link>
 
